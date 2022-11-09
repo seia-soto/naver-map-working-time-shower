@@ -1,0 +1,17 @@
+// ==UserScript==
+// @encoding utf-8
+// @name Naver Map Working Time Shower
+// @description 이 스크립트는 네이버 지도 웹 사이트에서 클릭만으로 운영 시간을 표시해줍니다.
+// @author HoJeong Go <seia@outlook.kr>
+// @version 0.1
+//
+// @grant none
+// @run-at document-start
+//
+// @match https://map.naver.com/*
+// @namespace https://github.com/seia-soto/naver-map-working-time-shower
+// @homepageURL https://github.com/seia-soto/naver-map-working-time-shower
+// @supportURL https://github.com/seia-soto/naver-map-working-time-shower
+// @updateURL https://github.com/seia-soto/naver-map-working-time-shower/raw/master/index.user.js
+// @downloadURL https://github.com/seia-soto/naver-map-working-time-shower/raw/master/index.user.js
+// ==/UserScript==
