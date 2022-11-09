@@ -315,11 +315,11 @@ type ISiteSummary = {
 
 	// Wait for DOM parsed
 	await new kPromise(resolve => {
-		if (document.readyState !== 'complete') {
+		if (document.readyState !== 'loading') {
 			resolve(null);
 		}
 
-		document.addEventListener('DOMContentLoaded', () => {
+		document.addEventListener('readystatechange', () => {
 			resolve(null);
 		});
 	});
@@ -328,7 +328,7 @@ type ISiteSummary = {
 	const aStyle = document.createElement('style');
 	aStyle.innerText = NProgressStyleStatic;
 
-	document.head.appendChild(aStyle);
+	thisWindow.document.head.appendChild(aStyle);
 
 	// Cache
 	let recentlyClickedSite: ISiteSummary;

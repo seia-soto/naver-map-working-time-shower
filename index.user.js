@@ -2429,16 +2429,16 @@
       thisWindow = unsafeWindow;
     }
     await new kPromise((resolve) => {
-      if (document.readyState !== "complete") {
+      if (document.readyState !== "loading") {
         resolve(null);
       }
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("readystatechange", () => {
         resolve(null);
       });
     });
     const aStyle = document.createElement("style");
     aStyle.innerText = NProgressStyleStatic;
-    document.head.appendChild(aStyle);
+    thisWindow.document.head.appendChild(aStyle);
     let recentlyClickedSite;
     thisWindow.XMLHttpRequest = new Proxy(
       kXMLHttpRequest,
